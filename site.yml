@@ -1,0 +1,11 @@
+---
+- name: Install Nginx and PHP-FPM
+  hosts: php
+  become: yes
+  become_method: sudo
+
+  roles:
+    - common
+    - nginx
+    - mysql
+    - php-fpm

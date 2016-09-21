@@ -1,0 +1,9 @@
+---
+- name: apt-get update 
+  raw: apt-get update -qq 
+
+- name: Install python 2.7 
+  raw: apt-get install -qq python2.7 
+
+- name: link to python
+  file: src=/usr/bin/python2.7 dest=/usr/bin/python
